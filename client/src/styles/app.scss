@@ -1,0 +1,128 @@
+.main {
+    display: flex;
+    flex-direction: column;
+
+}
+body{
+    scroll-behavior: smooth;
+    margin: 0;
+}
+
+.left-aside {
+    width: 12%;
+    background-color: #6470c4;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    top: 0%;
+    left: 0%;
+
+    height: 100vh;
+
+    .post a {
+        background-color: rgba($color: #051022, $alpha: 0.4);
+        border-radius: 0.4rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    ul {
+        font-size: 1.6rem;
+        list-style: none;
+        color: white;
+
+        * {
+            box-sizing: border-box;
+            margin: 1.4rem;
+            padding: 0.8rem;
+        }
+
+        li {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        .list a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            text-decoration: none;
+            position: relative;
+            z-index: 1;
+
+        }
+
+        .list a::before{
+            content: "";
+            position: absolute;
+            top:0;
+            left:0;
+            right:0;
+            bottom: 0;
+            z-index: -1;
+            background-color: #9d9df5;
+            transform: scaleX(0);
+            transition:  0.3s ease-in-out;
+            transform-origin: left;
+            border-radius: 0.2rem;
+
+
+        }
+        .list a:hover::before,
+        .list a:focus::before {
+
+            transform: scaleX(1);
+            
+        }
+        .list a:not(:hover):before{
+            transition: transform 0.3s ease-in-out;
+            transform: scaleX(0);
+        }
+    }
+
+    
+
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+}
+
+.right {
+    margin-left: calc(20%)
+}
+
+@media screen and (max-width:768px) {
+    .left-aside {
+        display: none;
+    }
+
+    .right {
+        margin-left: 2rem;
+        width: 100%;
+
+    }
+
+    .right-aside {
+        display: none;
+    }
+}
+
+.right-aside {
+    background-color: #cecef0;
+    width: 20%;
+    position: fixed;
+    top: 0;
+    right:0;
+    height: 180vh;
+    margin:0}
+
+@import "./alert.scss";

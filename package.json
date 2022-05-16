@@ -1,0 +1,46 @@
+{
+  "name": "devpartner",
+  "version": "1.0.0",
+  "description": "A social media application for developers to connect and find partners to work on projects",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run client\" \"npm run server\" ",
+    "heroku-postbuild" : "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AryanShinde/developerPartner.git"
+  },
+  "author": "Aryan Shinde",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AryanShinde/developerPartner/issues"
+  },
+  "homepage": "https://github.com/AryanShinde/developerPartner#readme",
+  "dependencies": {
+    "axios": "^0.22.0",
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.6",
+    "cors": "^2.8.5",
+    "dotenv": "^12.0.4",
+    "express": "^4.17.1",
+    "express-validator": "^6.12.1",
+    "gravatar": "^1.8.2",
+    "http-proxy-middleware": "^2.0.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.0.7",
+    "node-sass": "^6.0.1",
+    "react-icons": "^4.3.1",
+    "request": "^2.88.2",
+    "Router": "^2.1.0",
+    "sass": "^1.42.1"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "nodemon": "^2.0.13"
+  },
+  "proxy": "http://localhost:5000"
+}
