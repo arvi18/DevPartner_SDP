@@ -100,7 +100,7 @@ const Home = () => {
           <img src={hero2} alt="" />
         </motion.div>
       </Section3>
-      <Footer>
+      {/* <Footer>
         <motion.div
           variants={titleAnime}
           initial="before"
@@ -147,7 +147,7 @@ const Home = () => {
             </a>
           </div>
         </div>
-      </Footer>
+      </Footer> */}
     </HomeImg>
   );
 };
