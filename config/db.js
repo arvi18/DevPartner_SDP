@@ -2,9 +2,6 @@ const mongoose = require("mongoose");
 const config = require("config");
 require("dotenv").config({ path: "../config.env" });
 
-const db =
-  "mongodb+srv://devpartner:devpartner@cluster0.dqnf9.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
-
 const connectDB = async () => {
   try {
     await mongoose.connect(db, {
